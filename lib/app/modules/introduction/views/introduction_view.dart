@@ -23,7 +23,6 @@ class IntroductionView extends GetView<IntroductionController> {
                 Container(
                   child: Lottie.asset("assets/lottie/hello.json"),
                 ),
-                // Lottie.asset("assets/lottie/hello.json"),
                 Positioned(
                   bottom: 0,
                   left: 0,
@@ -31,7 +30,8 @@ class IntroductionView extends GetView<IntroductionController> {
                   child: Container(
                     width: Get.width,
                     height: 320,
-                    padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 30, vertical: 30),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(20),
