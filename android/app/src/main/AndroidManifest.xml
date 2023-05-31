@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.udel.string_validation_v2">
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="string_validation_v2"
+        android:label="String Validation"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

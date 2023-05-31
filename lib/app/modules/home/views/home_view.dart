@@ -11,6 +11,7 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: const Color(0xFFF9F9FB),
       appBar: AppBar(
         title: Text(
@@ -51,6 +52,7 @@ class HomeView extends GetView<HomeController> {
           vertical: 50,
         ),
         child: Form(
+          key: controller.formKey,
           child: Stack(
             children: [
               Positioned(
@@ -88,6 +90,7 @@ class HomeView extends GetView<HomeController> {
                           vertical: 10,
                         ),
                         child: TextFormField(
+                          controller: controller.textEditingController,
                           autofocus: true,
                           cursorColor: const Color(0xFF6AC3E9),
                           decoration: InputDecoration(
@@ -110,61 +113,64 @@ class HomeView extends GetView<HomeController> {
                 bottom: 0,
                 left: 0,
                 right: 0,
-                child: Column(
-                  children: [
-                    TextButton(
-                      onPressed: () {
-                        controller.getDataAPI(context);
-                      },
-                      child: Container(
-                        height: 50,
-                        width: Get.width,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          gradient: const LinearGradient(
-                            colors: [
-                              Color(0xFF4284DB),
-                              Color(0xFF29EAC4),
-                            ],
+                child: Container(
+                  color: Colors.white,
+                  child: Column(
+                    children: [
+                      TextButton(
+                        onPressed: () {
+                          controller.getDataAPI(context);
+                        },
+                        child: Container(
+                          height: 50,
+                          width: Get.width,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            gradient: const LinearGradient(
+                              colors: [
+                                Color(0xFF4284DB),
+                                Color(0xFF29EAC4),
+                              ],
+                            ),
                           ),
-                        ),
-                        alignment: Alignment.center,
-                        child: Text(
-                          "Validasi Kalimat",
-                          style: GoogleFonts.poppins(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ),
-                    TextButton(
-                      onPressed: () {
-                        Get.toNamed(Routes.RULES);
-                      },
-                      child: Container(
-                        height: 50,
-                        width: Get.width,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          border: Border.all(
-                            color: const Color(0xFF6AC3E9),
-                            width: 2,
-                          ),
-                        ),
-                        alignment: Alignment.center,
-                        child: Text(
-                          "Lihat Rules",
-                          style: GoogleFonts.poppins(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                            color: const Color(0xFF6AC3E9),
+                          alignment: Alignment.center,
+                          child: Text(
+                            "Validasi Kalimat",
+                            style: GoogleFonts.poppins(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                      TextButton(
+                        onPressed: () {
+                          Get.toNamed(Routes.RULES);
+                        },
+                        child: Container(
+                          height: 50,
+                          width: Get.width,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(
+                              color: const Color(0xFF6AC3E9),
+                              width: 2,
+                            ),
+                          ),
+                          alignment: Alignment.center,
+                          child: Text(
+                            "Lihat Rules",
+                            style: GoogleFonts.poppins(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              color: const Color(0xFF6AC3E9),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],

@@ -8,7 +8,7 @@ import '../../../models/words.dart';
 class HomeController extends GetxController {
   var valid = false.obs;
   final formKey = GlobalKey<FormState>();
-  final input = TextEditingController();
+  final TextEditingController textEditingController = TextEditingController();
 
   final count = 0.obs;
   @override
@@ -31,7 +31,7 @@ class HomeController extends GetxController {
     Get.focusScope?.unfocus();
     loadingAnimationDialog();
     try {
-      Words w = await postWords(input.text);
+      Words w = await postWords(textEditingController.text);
       valid.value = w.result;
       var validString = valid.value ? "valid" : "tidak valid";
       Get.defaultDialog(
