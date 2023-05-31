@@ -6,7 +6,6 @@ import '../../../helpers/loading_dialog.dart';
 import '../../../models/words.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
   var valid = false.obs;
   final formKey = GlobalKey<FormState>();
   final input = TextEditingController();
@@ -33,7 +32,7 @@ class HomeController extends GetxController {
     loadingAnimationDialog();
     try {
       Words w = await postWords(input.text);
-      valid.value = w.result!;
+      valid.value = w.result;
       var validString = valid.value ? "valid" : "tidak valid";
       Get.defaultDialog(
         titlePadding: EdgeInsets.symmetric(

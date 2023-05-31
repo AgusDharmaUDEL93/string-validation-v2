@@ -10,18 +10,18 @@ class RulesView extends GetView<RulesController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF9F9FB),
+      backgroundColor: const Color(0xFFF9F9FB),
       appBar: AppBar(
         title: Text(
           'Rules',
           style: GoogleFonts.poppins(
             fontSize: 18,
             fontWeight: FontWeight.w600,
-            color: Color(0xFF303030),
+            color: const Color(0xFF303030),
           ),
         ),
         centerTitle: true,
-        backgroundColor: Color(0xFFF9F9FB),
+        backgroundColor: const Color(0xFFF9F9FB),
         elevation: 0,
         leading: IconButton(
           onPressed: () {
@@ -34,7 +34,7 @@ class RulesView extends GetView<RulesController> {
         ),
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
           horizontal: 20,
           vertical: 50,
         ),
@@ -49,22 +49,21 @@ class RulesView extends GetView<RulesController> {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Obx(() => controller.isLoading.value
-                  ? Container(
-                      child: SkeletonParagraph(
-                      style: SkeletonParagraphStyle(
+                  ? SkeletonParagraph(
+                      style: const SkeletonParagraphStyle(
                         lines: 30,
                         lineStyle: SkeletonLineStyle(
                           randomLength: true,
                         ),
                       ),
-                    ))
+                    )
                   : ListView.builder(
                       shrinkWrap: true,
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: const NeverScrollableScrollPhysics(),
                       itemCount: controller.data!.result.length,
                       itemBuilder: (context, index) {
                         return Column(
@@ -74,10 +73,10 @@ class RulesView extends GetView<RulesController> {
                               controller.data!.result[index],
                               style: GoogleFonts.poppins(
                                 fontSize: 14,
-                                color: Color(0xFFA3A3A3),
+                                color: const Color(0xFFA3A3A3),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 5,
                             ),
                           ],

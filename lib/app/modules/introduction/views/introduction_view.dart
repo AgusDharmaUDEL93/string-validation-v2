@@ -12,10 +12,10 @@ class IntroductionView extends GetView<IntroductionController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffF5F5F5),
+      backgroundColor: const Color(0xffF5F5F5),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           child: SizedBox(
             height: Get.height,
             child: Stack(
@@ -31,7 +31,7 @@ class IntroductionView extends GetView<IntroductionController> {
                   child: Container(
                     width: Get.width,
                     height: 320,
-                    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 30),
+                    padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(20),
@@ -44,7 +44,7 @@ class IntroductionView extends GetView<IntroductionController> {
                           "STRING VALIDATION",
                           style: GoogleFonts.poppins(
                             fontSize: 26,
-                            color: Color(0xFF6AC3E9),
+                            color: const Color(0xFF6AC3E9),
                             fontWeight: FontWeight.w600,
                           ),
                         ),
@@ -53,11 +53,11 @@ class IntroductionView extends GetView<IntroductionController> {
                           style: GoogleFonts.poppins(
                             fontSize: 16,
                             fontWeight: FontWeight.w400,
-                            color: Color(0xFFA3A3A3),
+                            color: const Color(0xFFA3A3A3),
                           ),
                           textAlign: TextAlign.center,
                         ),
-                        SizedBox(),
+                        const SizedBox(),
                         TextButton(
                           onPressed: () {
                             Get.offNamed(Routes.HOME);
@@ -66,7 +66,7 @@ class IntroductionView extends GetView<IntroductionController> {
                             width: 165,
                             height: 50,
                             decoration: BoxDecoration(
-                              gradient: LinearGradient(
+                              gradient: const LinearGradient(
                                 colors: [
                                   Color(0xFF4284DB),
                                   Color(0xFF29EAC4),

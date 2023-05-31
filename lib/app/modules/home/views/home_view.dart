@@ -11,19 +11,19 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF9F9FB),
+      backgroundColor: const Color(0xFFF9F9FB),
       appBar: AppBar(
         title: Text(
           'Parsing Kalimat',
           style: GoogleFonts.poppins(
             fontSize: 18,
             fontWeight: FontWeight.w600,
-            color: Color(0xFF303030),
+            color: const Color(0xFF303030),
           ),
         ),
         actions: <Widget>[
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               shape: BoxShape.circle,
               color: Colors.white,
             ),
@@ -31,22 +31,22 @@ class HomeView extends GetView<HomeController> {
               onPressed: () {
                 Get.toNamed("/information");
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.question_mark,
                 color: Color(0xFF6AC3E9),
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 30,
           ),
         ],
         centerTitle: true,
-        backgroundColor: Color(0xFFF9F9FB),
+        backgroundColor: const Color(0xFFF9F9FB),
         elevation: 0,
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
           horizontal: 20,
           vertical: 50,
         ),
@@ -70,7 +70,7 @@ class HomeView extends GetView<HomeController> {
                           fontWeight: FontWeight.w600,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Container(
@@ -79,25 +79,25 @@ class HomeView extends GetView<HomeController> {
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
                           border: Border.all(
-                            color: Color(0xFF6AC3E9),
+                            color: const Color(0xFF6AC3E9),
                             width: 2,
                           ),
                         ),
-                        padding: EdgeInsets.symmetric(
+                        padding: const EdgeInsets.symmetric(
                           horizontal: 20,
                           vertical: 10,
                         ),
                         child: TextFormField(
                           autofocus: true,
-                          cursorColor: Color(0xFF6AC3E9),
+                          cursorColor: const Color(0xFF6AC3E9),
                           decoration: InputDecoration(
                             hintText: "Contoh : Saya berjalan di taman",
                             hintStyle: GoogleFonts.poppins(
                               fontSize: 14,
                               fontWeight: FontWeight.w400,
-                              color: Color(0xFFA3A3A3),
+                              color: const Color(0xFFA3A3A3),
                             ),
-                            focusColor: Color(0xFF6AC3E9),
+                            focusColor: const Color(0xFF6AC3E9),
                             border: InputBorder.none,
                           ),
                         ),
@@ -121,7 +121,7 @@ class HomeView extends GetView<HomeController> {
                         width: Get.width,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          gradient: LinearGradient(
+                          gradient: const LinearGradient(
                             colors: [
                               Color(0xFF4284DB),
                               Color(0xFF29EAC4),
@@ -149,7 +149,7 @@ class HomeView extends GetView<HomeController> {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           border: Border.all(
-                            color: Color(0xFF6AC3E9),
+                            color: const Color(0xFF6AC3E9),
                             width: 2,
                           ),
                         ),
@@ -159,7 +159,7 @@ class HomeView extends GetView<HomeController> {
                           style: GoogleFonts.poppins(
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
-                            color: Color(0xFF6AC3E9),
+                            color: const Color(0xFF6AC3E9),
                           ),
                         ),
                       ),
